@@ -1,0 +1,90 @@
+.tax__container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+.deductions_sub_heads {
+  font-size: 16px;
+  font-weight: bolder;
+  text-align: left;
+  color: #202dbf;
+}
+.basic__details {
+  text-align: left;
+}
+
+.BasicQs {
+  font-weight: bolder;
+  color: black;
+  font-size: 14px;
+}
+.income__details__form {
+  text-align: left;
+}
+.income_form_fields {
+  text-align: left;
+  font-size: 14px;
+  font-weight: 500;
+}
+.sub-heading {
+  font-weight: bolder;
+  text-decoration: underline;
+  padding-top: 1rem;
+  margin-bottom: -1rem;
+  font-size: 16px;
+}
+
+.faq_Question {
+  text-align: left;
+}
+.faq_Answer {
+  text-align: left;
+}
+.faq_head {
+  text-align: left;
+}
+.ibtn {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.not_calculated {
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+  align-items: center;
+}
+.summary__img {
+  width: 70%;
+}
+
+.innerSugg_container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+.suggestion__Text {
+  font-size: 1rem;
+  color: black;
+}
+.Edit__btn {
+  cursor: pointer;
+}
+
+@media only screen and (max-width: 1080px) {
+  .financial_year {
+    width: 25rem;
+  }
+}
+@media only screen and (max-width: 720px) {
+  .financial_year {
+    width: 20rem;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .financial_year {
+    width: 15rem;
+  }
+}
+
+

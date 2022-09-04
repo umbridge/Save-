@@ -1,0 +1,92 @@
+.auth__container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    align-content: center;
+    background-color: #202DBF;
+}
+.form__grid{
+    width: auto;
+}
+.auth__imgandText{
+   margin-left: 7rem;
+   height: 100vh;   
+}
+
+.signup__form{
+    height: 100vh;
+}
+.auth__image{
+    height: 40rem;
+    margin-top: 4rem;
+}
+
+.auth__text{ 
+   
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+.auth_text{ 
+    font-size: 2rem;
+    color: white;
+    font-weight: bolder;
+    width: 70%;
+    text-align: left;
+    margin-top: -1rem;
+}
+.auth_subtext{
+    font-size: 1rem;
+    color: white;
+    width: 70%;
+    text-align: left;
+    margin-top: -1rem;
+}
+.submit__button{
+    margin-top: 1rem;
+    background-color: #202DBF;
+}
+.alreadyMember{
+    margin-top: 1rem;
+    display: flex;
+    justify-content: center;
+}
+
+
+@media only screen and (max-width: 1080px) {
+    .auth__image{
+        height: 40rem;
+    }
+    .auth__imgandText{
+        margin-left: 0;
+    }
+ 
+}
+@media only screen and (max-width: 720px) {
+  
+   
+    .auth__imgandText{
+        margin-left: 0;
+    }
+    .auth__image{
+        height: 20rem;
+    }
+    .auth_text{ 
+        font-size: 1.2rem;
+    }
+    .auth_subtext{
+        font-size: 1rem;
+    }
+    .auth__imgandText{
+        height: auto;
+       
+    }
+    
+}
+@media only screen and (max-width: 620px) {
+    .auth__container{
+        flex-direction: column;   
+    }
+}
