@@ -1,0 +1,213 @@
+{
+	"info": {
+		"_postman_id": "5535dc21-b9b3-4c21-a0e0-7ca596ce1d38",
+		"name": "huTaxer Copy",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "20274137"
+	},
+	"item": [
+		{
+			"name": "GetUserBy Email",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://hu-taxer-backend-urtjok3rza-wl.a.run.app/getUser?email=gk@gmail.com",
+					"protocol": "https",
+					"host": [
+						"hu-taxer-backend-urtjok3rza-wl",
+						"a",
+						"run",
+						"app"
+					],
+					"path": [
+						"getUser"
+					],
+					"query": [
+						{
+							"key": "email",
+							"value": "gk@gmail.com"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetAll Users",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://hu-taxer-backend-urtjok3rza-wl.a.run.app/getAll",
+					"protocol": "https",
+					"host": [
+						"hu-taxer-backend-urtjok3rza-wl",
+						"a",
+						"run",
+						"app"
+					],
+					"path": [
+						"getAll"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Change Password",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"url": {
+					"raw": "https://hu-taxer-backend-urtjok3rza-wl.a.run.app/newPassword?email=ayushi@gmail.com&pass=ayushiVerma",
+					"protocol": "https",
+					"host": [
+						"hu-taxer-backend-urtjok3rza-wl",
+						"a",
+						"run",
+						"app"
+					],
+					"path": [
+						"newPassword"
+					],
+					"query": [
+						{
+							"key": "email",
+							"value": "ayushi@gmail.com"
+						},
+						{
+							"key": "pass",
+							"value": "ayushiVerma"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "AuthenticateJWT Token",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"userName\" : \"Arushi\",\n    \"userPassword\" : \"arushi1234\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://hu-taxer-backend-urtjok3rza-wl.a.run.app/login/authenticate",
+					"protocol": "https",
+					"host": [
+						"hu-taxer-backend-urtjok3rza-wl",
+						"a",
+						"run",
+						"app"
+					],
+					"path": [
+						"login",
+						"authenticate"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update User",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "   {\n        \"userId\": 1,\n        \"userName\": \"Gaurav\",\n        \"userEmail\": \"gk@gmail.com\",\n        \"userCompany\": \"Deloitte\",\n        \"userPassword\": \"newhudone\",\n        \"userDetails\": {\n            \"userDetailid\": 5,\n            \"year\": 2022,\n            \"age\": 21,\n            \"sex\": \"M\",\n            \"basicSalary\": 1200000,\n            \"rentalIncome\": 0,\n            \"otherIncome\": 0,\n            \"capitalGains\": 0,\n            \"businessIncome\": 0\n        },\n        \"userDeductions\": {\n            \"deductionid\": 2,\n            \"employerEpfContri\": 0,\n            \"additionNps\": 1000,\n            \"employerNpsContri\": 2000,\n            \"medicalInsurance\": 10000,\n            \"educationLoanInterest\": 300,\n            \"savingAccountInterest\": 500,\n            \"charityDonation\": 0,\n            \"section24\": {\n                \"rent\":10000\n            },\n            \"section80C\": {\n                \"section80cid\": 4,\n                \"ppf\": 1000,\n                \"employeeEpfContri\": 100,\n                \"nsc\": 1000,\n                \"elss\": 2000,\n                \"ulip\": 0,\n                \"lic\": 10000,\n                \"fd\": 3000,\n                \"ssy\": 0,\n                \"homeLoanPrincipal\": 100,\n                \"tutionFees\": 4000,\n                \"nps_80c\": 100\n            },\n            \"section10\": {\n                \"section10id\": 3,\n                \"actualRentPaid\": 0,\n                \"hra\": 100000,\n                \"lta\": 5000,\n                \"childEducationAllowance\": 0,\n                \"childHostelAllowance\": 0,\n                \"otherRepay\": 0,\n                \"metro\": false\n            },\n            \"homeLoanInterest\": 0\n        }\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://hu-taxer-backend-urtjok3rza-wl.a.run.app/updateUser",
+					"protocol": "https",
+					"host": [
+						"hu-taxer-backend-urtjok3rza-wl",
+						"a",
+						"run",
+						"app"
+					],
+					"path": [
+						"updateUser"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Calculate Tax ",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "    {\n        \"userId\": 11,\n        \"userName\": \"Rajesh\",\n        \"userEmail\": \"rajesh@gmail.com\",\n        \"userCompany\": \"MIcrosoft\",\n        \"userPassword\": \"sumit123\",\n        \"userDetails\": null,\n        \"userDeductions\": null\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://hu-taxer-backend-urtjok3rza-wl.a.run.app/taxCalculate",
+					"protocol": "https",
+					"host": [
+						"hu-taxer-backend-urtjok3rza-wl",
+						"a",
+						"run",
+						"app"
+					],
+					"path": [
+						"taxCalculate"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add New User",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "    {\n        \"userName\": \"Arushi\",\n        \"userEmail\": \"arushi@gmail.com\",\n        \"userCompany\": \"Zomato\",\n        \"userPassword\": \"arushi1234\"\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://hu-taxer-backend-urtjok3rza-wl.a.run.app/addUser",
+					"protocol": "https",
+					"host": [
+						"hu-taxer-backend-urtjok3rza-wl",
+						"a",
+						"run",
+						"app"
+					],
+					"path": [
+						"addUser"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
